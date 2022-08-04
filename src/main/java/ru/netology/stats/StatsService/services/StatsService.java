@@ -56,34 +56,27 @@ public class StatsService {
     }
 
     public int lowMiddleSum(int[] sales) {
-        int allMinMonth = 0;
-        int month = 0;
-        for (int sale : sales) {
-            if (sale < middleSum(sales)) {
-                allMinMonth = sales[month];
-            }
 
+        int lowMiddle = 0;
+        for (int i : sales) {
+            if (i < middleSum(sales)) {
+                lowMiddle++;
+            }
         }
-        return allMinMonth;
+        return lowMiddle;
     }
 
     public int highMiddleSum(int[] sales) {
-        int allHighMonth = 0;
-        int moths = 0;
-        for (int sale : sales) {
-            if (sale > middleSum(sales)) {
-                allHighMonth = sales[moths];
+
+        int highMiddle = 0;
+        for (int i : sales) {
+            if (i > middleSum(sales)) {
+                highMiddle++;
             }
-
         }
-        return allHighMonth;
+        return highMiddle;
     }
-
 }
-
-
-
-
 
 
 

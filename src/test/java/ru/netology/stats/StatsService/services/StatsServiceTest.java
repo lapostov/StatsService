@@ -17,7 +17,7 @@ public class StatsServiceTest {
 
         Assertions.assertEquals(expectedSum, actualSum);
 
-  }
+    }
 
     @Test
     public void middleSum() {
@@ -31,8 +31,9 @@ public class StatsServiceTest {
         Assertions.assertEquals(expectedMiddleSum, actualMiddleSum);
 
     }
-        @Test
-    public void maxMonthSales(){
+
+    @Test
+    public void maxMonthSales() {
         int[] sales = {9, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
         int expectedLastMax = 8;
@@ -43,7 +44,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void minMonthSales(){
+    public void minMonthSales() {
         int[] sales = {9, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
         int expectedLastMin = 8;
@@ -54,10 +55,10 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void lowMiddleSum(){
+    public void lowMiddleSum() {
         int[] sales = {9, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
-        int expectedLastMin = 7;
+        int expectedLastMin = 5;
         int actualLastMin = service.lowMiddleSum(sales);
 
         Assertions.assertEquals(expectedLastMin, actualLastMin);
@@ -65,15 +66,16 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void highMiddleSum(){
+    public void highMiddleSum() {
         int[] sales = {9, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
-        int expectedHighMiddle = 7;
-        int actualHighMiddle = service.highMiddleSum(sales);
+        int expectedLastHigh = 5;
+        int actualLastHigh = service.highMiddleSum(sales);
 
-        Assertions.assertEquals(expectedHighMiddle, actualHighMiddle);
+        Assertions.assertEquals(expectedLastHigh, actualLastHigh);
 
     }
+
 
 }
 
